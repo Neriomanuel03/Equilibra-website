@@ -1,0 +1,214 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  border: 0;
+  border-radius: var(--radius-md);
+  font: 600 0.95rem var(--font-body);
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    background 0.15s,
+    box-shadow 0.15s;
+}
+.btn:hover {
+  transform: translateY(-1px);
+}
+.btn-primary {
+  background: var(--green-700);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--green-800);
+  box-shadow: var(--shadow-md);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover {
+  background: var(--green-50);
+}
+.btn-expense {
+  background: #fff;
+  color: var(--expense);
+  border: 1px solid #f4c9c6;
+}
+.btn svg {
+  width: 18px;
+  height: 18px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+.progress {
+  height: 8px;
+  background: var(--green-100);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.progress > span {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: var(--green-500);
+  transition: width 0.6s;
+}
+.progress.warn > span {
+  background: var(--warning);
+}
+.progress.over > span {
+  background: var(--expense);
+}
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+.field label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.input {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font: inherit;
+  background: #fff;
+}
+.input:focus {
+  border-color: var(--green-500);
+  outline: 3px solid var(--green-100);
+}
+.cat-dot {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  color: #fff;
+  flex: none;
+}
+.cat-dot svg {
+  width: 18px;
+  height: 18px;
+}
+.actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.btn[hidden] {
+  display: none;
+}
+.btn-danger {
+  background: var(--expense);
+  color: #fff;
+}
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 99px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.b-ok {
+  background: var(--green-100);
+  color: var(--green-800);
+}
+.b-warn {
+  background: #fdf1dc;
+  color: #7a5410;
+}
+.b-over {
+  background: #fde4e2;
+  color: #a8322b;
+}
+.icon-btn {
+  border: 0;
+  background: transparent;
+  padding: 0.45rem;
+  border-radius: 8px;
+  color: var(--muted);
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.icon-btn:hover {
+  background: var(--green-50);
+  color: var(--ink);
+}
+.icon-btn.danger:hover {
+  background: #fde4e2;
+  color: var(--expense);
+}
+.icon-btn svg {
+  width: 18px;
+  height: 18px;
+}
+.row-actions {
+  display: flex;
+}
+dialog {
+  border: 0;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  width: min(440px, calc(100% - 2rem));
+  box-shadow: 0 24px 60px rgb(15 31 24/0.25);
+  animation: rise 0.25s both;
+}
+dialog::backdrop {
+  background: rgb(10 63 39/0.45);
+  backdrop-filter: blur(2px);
+}
+.form {
+  display: grid;
+  gap: 1rem;
+}
+.err {
+  color: var(--expense);
+  font-size: 0.82rem;
+  min-height: 1em;
+}
+.toast-box {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  z-index: 50;
+}
+.toast {
+  background: var(--ink);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  animation: rise 0.3s both;
+}
+.toast.ok {
+  border-left: 4px solid var(--green-400);
+}
+.toast.erro {
+  border-left: 4px solid var(--expense);
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: calc(var(--i, 0) * 70ms);
+}

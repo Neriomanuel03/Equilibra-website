@@ -1,0 +1,10 @@
+/* Ponto de entrada dos estilos.
+   Os 4 ficheiros abaixo são os teus CSS antigos (pasta css/).
+   Substitui o conteúdo de cada um pelo teu ficheiro original com o mesmo nome. */
+@import "./tokens.css";
+@import "./base.css";
+@import "./components.css";
+@import "./landing.css";
+
+/* Animação de entrada ao fazer scroll (substitui o reveal.js) */
+@import "./reveal.css";

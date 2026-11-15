@@ -1,0 +1,12 @@
+/* SUBSTITUI este ficheiro pelo teu css/tokens.css original */
+:root{
+  --green-50:#EEFBF4;--green-100:#D5F6E5;--green-200:#A8EBCB;--green-300:#6EDDA9;--green-400:#3FCB8B;
+  --green-500:#22B573;--green-600:#179A5F;--green-700:#11794A;--green-800:#0D5C38;--green-900:#0A3F27;
+  --ink:#0F1F18;--slate:#44564D;--muted:#7A8B82;--border:#DDE7E1;--bg:#F6F9F7;--surface:#fff;
+  --income:#22B573;--expense:#E5584F;--warning:#F2A93B;--info:#3B82C4;
+  --gradient-brand:linear-gradient(135deg,#3FCB8B,#179A5F);
+  --font-display:'Plus Jakarta Sans',system-ui,sans-serif;--font-body:'Inter',system-ui,sans-serif;
+  --radius-sm:8px;--radius-md:12px;--radius-lg:20px;
+  --shadow-sm:0 1px 2px rgb(15 31 24/.06);--shadow-md:0 8px 24px rgb(15 31 24/.08);
+  --sidebar-w:260px;
+}
