@@ -1,0 +1,110 @@
+/* =====================================================
+   Página de cadastro (criar conta)
+   Todas as classes começam por "auth", "campo" ou "termos"
+   para não chocarem com o resto do site.
+   ===================================================== */
+
+body { margin: 0; }
+
+.auth {
+  /* cores desta página (podes trocar pelas variáveis do teu tokens.css) */
+  --verde-escuro: #07402a;
+  --verde: #0b7a3e;
+  --verde-vivo: #12a455;
+  --verde-claro: #46e394;
+  --verde-suave: #d9f7e6;
+  --tinta: #0b2a1f;
+  --texto: #20332a;
+  --apagado: #6b7f75;
+  --linha: #dbe7e0;
+  --erro: #c93a3a;
+
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 40px 20px;
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--texto);
+  background:
+    radial-gradient(900px 520px at 4% 0%, #bff0d6 0%, transparent 62%),
+    radial-gradient(800px 560px at 100% 18%, #cdf4de 0%, transparent 58%),
+    radial-gradient(700px 500px at 0% 100%, #d4f5e2 0%, transparent 60%),
+    #eefaf3;
+}
+
+.auth *, .auth *::before, .auth *::after { box-sizing: border-box; }
+
+.auth h1, .auth h2, .auth-logo, .auth-botao, .auth-selo {
+  font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+}
+
+/* Texto só para leitores de ecrã (labels escondidos) */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- O cartão com 2 colunas ---------- */
+.auth-card {
+  width: min(1080px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1fr);
+  border-radius: 28px;
+  overflow: hidden;
+  background: #fcfefd;
+  box-shadow: 0 30px 70px rgba(7, 64, 42, .18), 0 2px 0 rgba(255, 255, 255, .8) inset;
+}
+
+/* ---------- Painel verde (esquerda) ---------- */
+.auth-brand {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 48px 0;
+  color: #fff;
+  overflow: hidden;
+  background:
+    radial-gradient(520px 340px at 100% 0%, rgba(70, 227, 148, .22), transparent 65%),
+    linear-gradient(165deg, #0f8545 0%, #0a6a37 42%, #07482c 100%);
+}
+
+.auth-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+}
+.auth-logo img { height: 40px; width: auto; display: block; }
+.auth-logo--mobile { display: none; color: var(--tinta); margin-bottom: 22px; }
+
+.auth-brand__titulo {
+  margin: 38px 0 16px;
+  font-size: clamp(1.9rem, 3.1vw, 2.55rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -.01em;
+}
+.auth-brand__titulo span { color: var(--verde-claro); }
+
+.auth-brand__texto {
+  margin: 0 0 30px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #e3f7ec;
+}
+
+.auth-beneficios {
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
